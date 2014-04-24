@@ -3291,7 +3291,7 @@ namespace TidyNet
 				/* discard unexpected end tags */
 				if (node.Type == Node.EndTag)
 				{
-					Report.Error(lexer, element, node, Report.UNEXPECTED_ENDTAG);
+					Report.Warning(lexer, element, node, Report.UNEXPECTED_ENDTAG);
 					continue;
 				}
 				

@@ -455,7 +455,7 @@ namespace TidyNet
 				string message;
 				if (element != null)
 				{
-					message = String.Format(GetMessage("unexpected_endtag_suffix"), element.Element);
+					message = String.Format(GetMessage("unexpected_endtag_suffix"), node.Element, element.Element);
 				}
 				else
 				{
