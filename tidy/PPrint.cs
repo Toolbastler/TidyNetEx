@@ -437,7 +437,7 @@ namespace TidyNet
 				quoted as &amp; The latter is required
 				for XML where naked '&' are illegal.
 				*/
-				if (c == '&' && _options.QuoteAmpersand)
+				if (c == '&' && _options.QuoteAmpersand && !_options.PreserveEntities)
 				{
 					AddC('&', linelen++);
 					AddC('a', linelen++);

@@ -418,20 +418,25 @@ namespace TidyNet
 					this.columns = startcol;
 					Report.EntityError(this, Report.MISSING_SEMICOLON, str, c);
 				}
-				
-				this.lexsize = start;
-				
-				if (ch == 160 && (mode & Preformatted) != 0)
-					ch = ' ';
-				
-				AddCharToLexer(ch);
-				
-				if (ch == '&' && !Options.QuoteAmpersand)
-				{
-					AddCharToLexer('a');
-					AddCharToLexer('m');
-					AddCharToLexer('p');
+
+				if (Options.PreserveEntities)
 					AddCharToLexer(';');
+				else
+				{
+					this.lexsize = start;
+
+					if (ch == 160 && (mode & Preformatted) != 0)
+						ch = ' ';
+
+					AddCharToLexer(ch);
+
+					if (ch == '&' && !Options.QuoteAmpersand)
+					{
+						AddCharToLexer('a');
+						AddCharToLexer('m');
+						AddCharToLexer('p');
+						AddCharToLexer(';');
+					}
 				}
 			}
 		}

@@ -259,6 +259,19 @@ namespace TidyNet
 			}
 		}
 
+		/// <summary>Preserve well-formed entities.</summary>
+		public virtual bool PreserveEntities
+		{
+			get
+			{
+				return _preserveEntities;
+			}
+			set
+			{
+				_preserveEntities = value;
+			}
+		}
+
 		/// <summary>Output " marks as &amp;quot;</summary>
 		public virtual bool QuoteMarks
 		{
@@ -890,6 +903,7 @@ namespace TidyNet
 		private bool _breakBeforeBR = false; /* o/p newline before <br> or not? */
 		private bool _burstSlides = false; /* create slides on each h2 element */
 		private bool _numEntities = false; /* use numeric entities */
+		private bool _preserveEntities = false; /* preserve well-formed entities */
 		private bool _quoteMarks = false; /* output " marks as &quot; */
 		private bool _quoteNbsp = true; /* output non-breaking space as entity */
 		private bool _quoteAmpersand = true; /* output naked ampersand as &amp; */
