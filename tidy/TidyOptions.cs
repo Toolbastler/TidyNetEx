@@ -922,6 +922,7 @@ namespace TidyNet
 		private bool _word2000 = false; /* draconian cleaning for Word2000 */
 		private bool _tidyMark = true; /* add meta element indicating tidied doc */
 		private bool _literalAttribs = false; /* if true attributes may use newlines */
+
 		private TagTable _tt = new TagTable();
      
 		
@@ -974,5 +975,10 @@ namespace TidyNet
 				ParsePreTagNames(value);
             }
         }
+
+        public bool DropBRElements { get; set; }
+
+        public bool ShowInfos { get; set; }
+        public bool ShowWarnings { get; set; }
     }
 }
