@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using TidyNet;
 
 namespace TidyNetConsole;
 
-internal class TidyNetHelper
+internal static class TidyNetHelper
 {
-    public string Tidy(string html)
+    public static string? Tidy(string html)
     {
         var tidy = new Tidy();
 
@@ -17,35 +13,32 @@ internal class TidyNetHelper
 
         var messages = new TidyMessageCollection();
 
-        using (var input = new MemoryStream(Encoding.UTF8.GetBytes(html)))
-        using (var output = new MemoryStream())
+        using var input = new MemoryStream(Encoding.UTF8.GetBytes(html));
+        using var output = new MemoryStream();
+
+        input.Position = 0;
+
+        tidy.Parse(input, output, messages);
+
+        output.Position = 0;
+
+        if (messages.Any())
         {
-            input.Position = 0;
-
-            try
-            {
-                tidy.Parse(input, output, messages);
-
-                output.Position = 0;
-
-                return Encoding.UTF8.GetString(output.ToArray());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Tidy'ing html failed: {0}", ex.Message);
-            }
-
-            return null;
+            Console.WriteLine($"Errors: {messages.Errors} | Warnings: {messages.Warnings}");
+            messages.ForEach(Console.WriteLine);
         }
+
+        if (messages.Errors > 0 && output.Length == 0)
+            throw new InvalidOperationException($"{messages.Errors} errors occurred: " +
+                                                string.Join(" | ", messages.Where(m => m.Level == MessageLevel.Error)));
+
+        return Encoding.UTF8.GetString(output.ToArray());
     }
 
-    void BuildOptions(Tidy tidy)
+    static void BuildOptions(Tidy tidy)
     {
-        /* tidy-optionen zur nachbearbeitung von html-text nach dem xslt-extraktor */
-        /* Version 2: mit deklaration von html5-elementen */
-
         /* optionen zum erzeugen einer sauberen und flachen absatzstruktur */
-        tidy.Options.EncloseBlockText = true;
+        // tidy.Options.EncloseBlockText = true;
         tidy.Options.EncloseText = true;
         tidy.Options.DropEmptyParas = true;
 
@@ -69,16 +62,10 @@ internal class TidyNetHelper
         tidy.Options.XmlSpace = false;
 
         /* allgemeine optionen */
-        // forceoutput: yes
         tidy.Options.DocType = DocType.Omit;
         tidy.Options.MakeClean = false;
-        // show-warnings: false
-        // input-encoding: utf8
-        // output-encoding: utf8
         tidy.Options.CharEncoding = CharEncoding.UTF8;
         
-        // outputbom: yes
-
         /* html5 - Elemente deklarieren */
         tidy.Options.NewBlocklevelTags = "aside article figure figcaption";
         tidy.Options.NewInlineTags = "mark";

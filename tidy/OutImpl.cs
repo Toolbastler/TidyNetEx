@@ -165,8 +165,9 @@ namespace TidyNet
 
 		static OutImpl()
 		{
-			string lineSeparator = (string)ConfigurationSettings.AppSettings["line.separator"];
-			if (lineSeparator == null) lineSeparator = Environment.NewLine;
+			//string lineSeparator = (string)ConfigurationSettings.AppSettings["line.separator"];
+			//if (lineSeparator == null) 
+            var lineSeparator = Environment.NewLine;
 			nlBytes = System.Text.Encoding.UTF8.GetBytes(lineSeparator);
 		}
 	}

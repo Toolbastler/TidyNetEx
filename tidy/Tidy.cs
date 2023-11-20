@@ -185,7 +185,7 @@ namespace TidyNet
 		/// Parses the input stream and writes to the output.
 		/// </summary>
 		/// <param name="input">The input stream</param>
-		/// <param name="Output">The output stream</param>
+		/// <param name="output">The output stream</param>
 		/// <param name="messages">The messages</param>
 		public virtual void Parse(Stream input, Stream output, TidyMessageCollection messages)
 		{
