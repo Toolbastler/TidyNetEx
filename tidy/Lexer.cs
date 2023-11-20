@@ -2755,13 +2755,13 @@ namespace TidyNet
 		One issue arises with pushing inlines when
 		the tag is already pushed. For instance:
 		
-		<p><em>text
-		<p><em>more text
+		<br/><em>text
+		<br/><em>more text
 		
 		Shouldn't be mapped to
 		
-		<p><em>text</em></p>
-		<p><em><em>more text</em></em>
+		<br/><em>text</em></p>
+		<br/><em><em>more text</em></em>
 		*/
 		public virtual void PushInline(Node node)
 		{

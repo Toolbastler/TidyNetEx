@@ -16,13 +16,13 @@ namespace TidyNet.Dom
 	/// <summary> The <code>Document</code> interface represents the entire HTML or XML 
 	/// document. Conceptually, it is the root of the document tree, and provides 
 	/// the primary access to the document's data.
-	/// <p>Since elements, text nodes, comments, processing instructions, etc. 
+	/// <br/>Since elements, text nodes, comments, processing instructions, etc. 
 	/// cannot exist outside the context of a <code>Document</code>, the 
 	/// <code>Document</code> interface also contains the factory methods needed 
 	/// to create these objects. The <code>Node</code> objects created have a 
 	/// <code>ownerDocument</code> attribute which associates them with the 
 	/// <code>Document</code> within whose context they were created.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface IDocument : INode
 	{
@@ -60,10 +60,10 @@ namespace TidyNet.Dom
 		/// <summary> Creates an element of the type specified. Note that the instance 
 		/// returned implements the <code>Element</code> interface, so attributes 
 		/// can be specified directly on the returned object.
-		/// <br>In addition, if there are known attributes with default values, 
+		/// <br/>In addition, if there are known attributes with default values, 
 		/// <code>Attr</code> nodes representing them are automatically created 
 		/// and attached to the element.
-		/// <br>To create an element with a qualified name and namespace URI, use 
+		/// <br/>To create an element with a qualified name and namespace URI, use 
 		/// the <code>createElementNS</code> method.
 		/// </summary>
 		/// <param name="tagNameThe">name of the element type to instantiate. For XML, 
@@ -118,7 +118,7 @@ namespace TidyNet.Dom
 		/// <summary> Creates an <code>Attr</code> of the given name. Note that the 
 		/// <code>Attr</code> instance can then be set on an <code>Element</code> 
 		/// using the <code>setAttributeNode</code> method. 
-		/// <br>To create an attribute with a qualified name and namespace URI, use 
+		/// <br/>To create an attribute with a qualified name and namespace URI, use 
 		/// the <code>createAttributeNS</code> method.
 		/// </summary>
 		/// <param name="nameThe">name of the attribute.
@@ -168,14 +168,14 @@ namespace TidyNet.Dom
 		/// node has no parent; (<code>parentNode</code> is <code>null</code>). 
 		/// The source node is not altered or removed from the original document; 
 		/// this method creates a new copy of the source node.
-		/// <br>For all nodes, importing a node creates a node object owned by the 
+		/// <br/>For all nodes, importing a node creates a node object owned by the 
 		/// importing document, with attribute values identical to the source 
 		/// node's <code>nodeName</code> and <code>nodeType</code>, plus the 
 		/// attributes related to namespaces (<code>prefix</code>, 
 		/// <code>localName</code>, and <code>namespaceURI</code>). As in the 
 		/// <code>cloneNode</code> operation on a <code>Node</code>, the source 
 		/// node is not altered.
-		/// <br>Additional information is copied as appropriate to the 
+		/// <br/>Additional information is copied as appropriate to the 
 		/// <code>nodeType</code>, attempting to mirror the behavior expected if 
 		/// a fragment of XML or HTML source was copied from one document to 
 		/// another, recognizing that the two documents may have different DTDs 
@@ -284,7 +284,7 @@ namespace TidyNet.Dom
 		/// <exception cref="DOMException">
 		/// INVALID_CHARACTER_ERR: Raised if the specified qualified name 
 		/// contains an illegal character.
-		/// <br>NAMESPACE_ERR: Raised if the <code>qualifiedName</code> is 
+		/// <br/>NAMESPACE_ERR: Raised if the <code>qualifiedName</code> is 
 		/// malformed, if the <code>qualifiedName</code> has a prefix and the 
 		/// <code>namespaceURI</code> is <code>null</code>, or if the 
 		/// <code>qualifiedName</code> has a prefix that is "xml" and the 

@@ -19,8 +19,8 @@ namespace TidyNet.Dom
 	/// to the list of entities that are defined for the document, and little 
 	/// else because the effect of namespaces and the various XML schema efforts 
 	/// on DTD representation are not clearly understood as of this writing.
-	/// <p>The DOM Level 2 doesn't support editing <code>DocumentType</code> nodes.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>The DOM Level 2 doesn't support editing <code>DocumentType</code> nodes.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface IDocumentType : INode
 	{
@@ -43,7 +43,7 @@ namespace TidyNet.Dom
 		/// and the first declaration of <code>bar</code> but not the second 
 		/// declaration of <code>bar</code> or <code>baz</code>. Every node in 
 		/// this map also implements the <code>Entity</code> interface.
-		/// <br>The DOM Level 2 does not support editing entities, therefore 
+		/// <br/>The DOM Level 2 does not support editing entities, therefore 
 		/// <code>entities</code> cannot be altered in any way.
 		/// </summary>
 		INamedNodeMap Entities
@@ -54,7 +54,7 @@ namespace TidyNet.Dom
 		/// <summary> A <code>NamedNodeMap</code> containing the notations declared in the 
 		/// DTD. Duplicates are discarded. Every node in this map also implements 
 		/// the <code>Notation</code> interface.
-		/// <br>The DOM Level 2 does not support editing notations, therefore 
+		/// <br/>The DOM Level 2 does not support editing notations, therefore 
 		/// <code>notations</code> cannot be altered in any way.
 		/// </summary>
 		INamedNodeMap Notations

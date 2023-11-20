@@ -21,7 +21,7 @@ namespace TidyNet.Dom
 	/// the element. If there is markup, it is parsed into the information items 
 	/// (elements, comments, etc.) and <code>Text</code> nodes that form the list 
 	/// of children of the element.
-	/// <p>When a document is first made available via the DOM, there is only one 
+	/// <br/>When a document is first made available via the DOM, there is only one 
 	/// <code>Text</code> node for each block of text. Users may create adjacent 
 	/// <code>Text</code> nodes that represent the contents of a given element 
 	/// without any intervening markup, but should be aware that there is no way 
@@ -30,7 +30,7 @@ namespace TidyNet.Dom
 	/// <code>normalize()</code> method on <code>Node</code> merges any such 
 	/// adjacent <code>Text</code> objects into a single node for each block of 
 	/// text.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface IText : Dom.ICharacterData
 	{

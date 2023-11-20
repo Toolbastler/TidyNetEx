@@ -19,15 +19,15 @@ namespace TidyNet.Dom
 	/// In general, DOM methods return specific error values in ordinary 
 	/// processing situations, such as out-of-bound errors when using 
 	/// <code>NodeList</code>. 
-	/// <p>Implementations should raise other exceptions under other circumstances. 
+	/// <br/>Implementations should raise other exceptions under other circumstances. 
 	/// For example, implementations should raise an implementation-dependent 
 	/// exception if a <code>null</code> argument is passed. 
-	/// <p>Some languages and object systems do not support the concept of 
+	/// <br/>Some languages and object systems do not support the concept of 
 	/// exceptions. For such systems, error conditions may be indicated using 
 	/// native error reporting mechanisms. For some bindings, for example, 
 	/// methods may return error codes similar to those listed in the 
 	/// corresponding method descriptions.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	[Serializable]
 	public class DomException : Exception

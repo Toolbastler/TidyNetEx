@@ -1183,7 +1183,7 @@ namespace TidyNet
 						return;
 					}
 					
-					/* within <dt> or <pre> map <p> to <br> */
+					/* within <dt> or <pre> map <br/> to <br/> */
 					if (node.Tag == tt.TagP && node.Type == Node.StartTag && ((mode & Lexer.Preformatted) != 0 || element.Tag == tt.TagDt || element.IsDescendantOf(tt.TagDt)))
 					{
 						node.Tag = tt.TagBr;
@@ -1207,14 +1207,14 @@ namespace TidyNet
 					
 					if (node.Type == Node.EndTag)
 					{
-						/* coerce </br> to <br> */
+						/* coerce </br> to <br/> */
 						if (node.Tag == tt.TagBr)
 						{
 							node.Type = Node.StartTag;
 						}
 						else if (node.Tag == tt.TagP)
 						{
-							/* coerce unmatched </p> to <br><br> */
+							/* coerce unmatched </p> to <br/><br/> */
 							if (!element.IsDescendantOf(tt.TagP))
 							{
 								Node.CoerceNode(lexer, node, tt.TagBr);
@@ -1507,7 +1507,7 @@ namespace TidyNet
 							Report.Warning(lexer, element, node, Report.INSERTING_TAG);
 						}
 						
-						/* trim white space before <br> */
+						/* trim white space before <br/> */
 						if (node.Tag == tt.TagBr)
 						{
 							Node.TrimSpaces(lexer, element);
@@ -1868,10 +1868,10 @@ namespace TidyNet
 						{
 							Report.Warning(lexer, pre, node, Report.USING_BR_INPLACE_OF);
 							
-							/* trim white space before <p> in <pre>*/
+							/* trim white space before <br/> in <pre>*/
 							Node.TrimSpaces(lexer, pre);
 							
-							/* coerce both <p> and </p> to <br> */
+							/* coerce both <br/> and </p> to <br/> */
 							Node.CoerceNode(lexer, node, tt.TagBr);
 							Node.InsertNodeAtEnd(pre, node);
 						}
@@ -1962,7 +1962,7 @@ namespace TidyNet
 					*/
 					if (node.Type == Node.StartTag || node.Type == Node.StartEndTag)
 					{
-						/* trim white space before <br> */
+						/* trim white space before <br/> */
 						if (node.Tag == tt.TagBr)
 						{
 							Node.TrimSpaces(lexer, pre);
@@ -2362,7 +2362,7 @@ namespace TidyNet
 							mode = Lexer.IgnoreWhitespace;
 						}
 						
-						/* trim white space before <br> */
+						/* trim white space before <br/> */
 						if (node.Tag == tt.TagBr)
 						{
 							Node.TrimSpaces(lexer, element);

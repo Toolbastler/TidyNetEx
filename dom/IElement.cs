@@ -27,7 +27,7 @@ namespace TidyNet.Dom
 	/// directly access an attribute value can safely be used as a convenience.In 
 	/// DOM Level 2, the method <code>normalize</code> is inherited from the 
 	/// <code>Node</code> interface where it was moved.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface IElement : INode
 	{
@@ -64,7 +64,7 @@ namespace TidyNet.Dom
 		/// <code>Text</code> and <code>EntityReference</code> nodes, build the 
 		/// appropriate subtree, and use <code>setAttributeNode</code> to assign 
 		/// it as the value of an attribute.
-		/// <br>To set an attribute with a qualified name and namespace URI, use 
+		/// <br/>To set an attribute with a qualified name and namespace URI, use 
 		/// the <code>setAttributeNS</code> method.
 		/// </summary>
 		/// <param name="nameThe">name of the attribute to create or alter.</param>
@@ -80,7 +80,7 @@ namespace TidyNet.Dom
 		/// a default value, an attribute immediately appears containing the 
 		/// default value as well as the corresponding namespace URI, local name, 
 		/// and prefix when applicable.
-		/// <br>To remove an attribute by local name and namespace URI, use the 
+		/// <br/>To remove an attribute by local name and namespace URI, use the 
 		/// <code>removeAttributeNS</code> method.
 		/// </summary>
 		/// <param name="nameThe">name of the attribute to remove.</param>
@@ -90,7 +90,7 @@ namespace TidyNet.Dom
 		void RemoveAttribute(string name);
 
 		/// <summary> Retrieves an attribute node by name.
-		/// <br>To retrieve an attribute node by qualified name and namespace URI, 
+		/// <br/>To retrieve an attribute node by qualified name and namespace URI, 
 		/// use the <code>getAttributeNodeNS</code> method.
 		/// </summary>
 		/// <param name="nameThe">name (<code>nodeName</code>) of the attribute to retrieve.</param>
@@ -102,7 +102,7 @@ namespace TidyNet.Dom
 		/// <summary> Adds a new attribute node. If an attribute with that name (
 		/// <code>nodeName</code>) is already present in the element, it is 
 		/// replaced by the new one.
-		/// <br>To add a new attribute node with a qualified name and namespace 
+		/// <br/>To add a new attribute node with a qualified name and namespace 
 		/// URI, use the <code>setAttributeNodeNS</code> method.
 		/// </summary>
 		/// <param name="newAttrThe"><code>Attr</code> node to add to the attribute list.
@@ -172,7 +172,7 @@ namespace TidyNet.Dom
 		/// and use <code>setAttributeNodeNS</code> or 
 		/// <code>setAttributeNode</code> to assign it as the value of an 
 		/// attribute.
-		/// <br>HTML-only DOM implementations do not need to implement this method.
+		/// <br/>HTML-only DOM implementations do not need to implement this method.
 		/// </summary>
 		/// <param name="namespaceURIThe">namespace URI of the attribute to create or 
 		/// alter.</param>
@@ -199,7 +199,7 @@ namespace TidyNet.Dom
 		/// attribute has a default value it is immediately replaced. The 
 		/// replacing attribute has the same namespace URI and local name, as 
 		/// well as the original prefix.
-		/// <br>HTML-only DOM implementations do not need to implement this method.
+		/// <br/>HTML-only DOM implementations do not need to implement this method.
 		/// </summary>
 		/// <param name="namespaceURIThe">namespace URI of the attribute to remove.</param>
 		/// <param name="localNameThe">local name of the attribute to remove.</param>
@@ -222,7 +222,7 @@ namespace TidyNet.Dom
 		/// <summary> Adds a new attribute. If an attribute with that local name and that 
 		/// namespace URI is already present in the element, it is replaced by 
 		/// the new one.
-		/// <br>HTML-only DOM implementations do not need to implement this method.
+		/// <br/>HTML-only DOM implementations do not need to implement this method.
 		/// </summary>
 		/// <param name="newAttrThe"><code>Attr</code> node to add to the attribute list.</param>
 		/// <returns> If the <code>newAttr</code> attribute replaces an existing 

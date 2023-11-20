@@ -23,7 +23,7 @@ namespace TidyNet
 	/// <version>1.9, 2000/06/03 Tidy Release 30 Apr 2000</version>
 	/// <version>1.10, 2000/07/22 Tidy Release 8 Jul 2000</version>
 	/// <version>1.11, 2000/08/16 Tidy Release 4 Aug 2000</version>
-	/// <remarks> <p>The items in the <code>NodeList</code> are accessible via an integral 
+	/// <remarks> <br/>The items in the <code>NodeList</code> are accessible via an integral 
 	/// index, starting from 0. 
 	/// </remarks>
 	internal class DomNodeListByTagNameImpl : INodeList

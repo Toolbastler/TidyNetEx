@@ -16,7 +16,7 @@ namespace TidyNet.Dom
 	/// <summary> The <code>ProcessingInstruction</code> interface represents a "processing 
 	/// instruction", used in XML as a way to keep processor-specific information 
 	/// in the text of the document.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface IProcessingInstruction : INode
 	{

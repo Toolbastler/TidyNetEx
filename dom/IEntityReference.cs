@@ -31,9 +31,9 @@ namespace TidyNet.Dom
 	/// namespace prefix resolution depends on where the entity reference is, the 
 	/// descendants of the <code>EntityReference</code> node may be bound to 
 	/// different namespace URIs.
-	/// <p>As for <code>Entity</code> nodes, <code>EntityReference</code> nodes and 
+	/// <br/>As for <code>Entity</code> nodes, <code>EntityReference</code> nodes and 
 	/// all their descendants are readonly.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface IEntityReference : INode
 	{

@@ -55,37 +55,37 @@ acknowledgment is not required but would be appreciated.
 namespace TidyNet
 {
 	/// <summary>
-	/// <p>HTML parser and pretty printer</p>
+	/// <br/>HTML parser and pretty printer</p>
 	/// 
-	/// <p>
+	/// <br/>
 	/// (c) 1998-2000 (W3C) MIT, INRIA, Keio University
 	/// See Tidy.cs for the copyright notice.
 	/// Derived from <a href="http://www.w3.org/People/Raggett/tidy">
 	/// HTML Tidy Release 4 Aug 2000</a>
 	/// </p>
 	/// 
-	/// <p>
+	/// <br/>
 	/// Copyright (c) 1998-2000 World Wide Web Consortium (Massachusetts
 	/// Institute of Technology, Institut National de Recherche en
 	/// Informatique et en Automatique, Keio University). All Rights
 	/// Reserved.
 	/// </p>
 	/// 
-	/// <p>
-	/// Contributing Author(s):<br>
-	/// <a href="mailto:dsr@w3.org">Dave Raggett</a><br>
+	/// <br/>
+	/// Contributing Author(s):<br/>
+	/// <a href="mailto:dsr@w3.org">Dave Raggett</a><br/>
 	/// <a href="mailto:ac.quick@sympatico.ca">Andy Quick</a> (translation to Java)
 	/// <a href="mailto:seth_yates@hotmail.com">Seth Yates</a> (translation to C#)
 	/// </p>
 	/// 
-	/// <p>
+	/// <br/>
 	/// The contributing author(s) would like to thank all those who
 	/// helped with testing, bug fixes, and patience.  This wouldn't
 	/// have been possible without all of you.
 	/// </p>
 	/// 
-	/// <p>
-	/// COPYRIGHT NOTICE:<br>
+	/// <br/>
+	/// COPYRIGHT NOTICE:<br/>
 	/// 
 	/// This software and documentation is provided "as is," and
 	/// the copyright holders and contributing author(s) make no
@@ -96,20 +96,20 @@ namespace TidyNet
 	/// copyrights, trademarks or other rights. 
 	/// </p>
 	/// 
-	/// <p>
+	/// <br/>
 	/// The copyright holders and contributing author(s) will not be
 	/// liable for any direct, indirect, special or consequential damages
 	/// arising out of any use of the software or documentation, even if
 	/// advised of the possibility of such damage.
 	/// </p>
 	/// 
-	/// <p>
+	/// <br/>
 	/// Permission is hereby granted to use, copy, modify, and distribute
 	/// this source code, or portions hereof, documentation and executables,
 	/// for any purpose, without fee, subject to the following restrictions:
 	/// </p>
 	/// 
-	/// <p>
+	/// <br/>
 	/// <ol>
 	/// <li>The origin of this source code must not be misrepresented.</li>
 	/// <li>Altered versions must be plainly marked as such and must
@@ -119,7 +119,7 @@ namespace TidyNet
 	/// </ol>
 	/// </p>
 	/// 
-	/// <p>
+	/// <br/>
 	/// The copyright holders and contributing author(s) specifically
 	/// permit, without fee, and encourage the use of this source code
 	/// as a component for supporting the Hypertext Markup Language in

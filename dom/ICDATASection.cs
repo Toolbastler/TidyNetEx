@@ -19,13 +19,13 @@ namespace TidyNet.Dom
 	/// section. CDATA sections cannot be nested. Their primary purpose is for 
 	/// including material such as XML fragments, without needing to escape all 
 	/// the delimiters.
-	/// <p>The <code>DOMString</code> attribute of the <code>Text</code> node holds 
+	/// <br/>The <code>DOMString</code> attribute of the <code>Text</code> node holds 
 	/// the text that is contained by the CDATA section. Note that this may 
 	/// contain characters that need to be escaped outside of CDATA sections and 
 	/// that, depending on the character encoding ("charset") chosen for 
 	/// serialization, it may be impossible to write out some characters as part 
 	/// of a CDATA section. 
-	/// <p> The <code>CDATASection</code> interface inherits from the 
+	/// <br/> The <code>CDATASection</code> interface inherits from the 
 	/// <code>CharacterData</code> interface through the <code>Text</code> 
 	/// interface. Adjacent <code>CDATASection</code> nodes are not merged by use 
 	/// of the <code>normalize</code> method of the <code>Node</code> interface.
@@ -42,7 +42,7 @@ namespace TidyNet.Dom
 	/// an error or exception when a character is missing from the encoding, 
 	/// making the task of ensuring that data is not corrupted on serialization 
 	/// more difficult.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface ICdataSection : IText
 	{

@@ -18,7 +18,7 @@ namespace TidyNet.Dom
 	/// <code>&lt;!--</code>' and ending '<code>--&gt;</code>'. Note that this is 
 	/// the definition of a comment in XML, and, in practice, HTML, although some 
 	/// HTML tools may implement the full SGML comment structure.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface IComment : ICharacterData
 	{

@@ -16,7 +16,7 @@ namespace TidyNet.Dom
 	/// <summary> The <code>DOMImplementation</code> interface provides a number of methods 
 	/// for performing operations that are independent of any particular instance 
 	/// of the document object model.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface IDomImplementation
 	{
@@ -47,7 +47,7 @@ namespace TidyNet.Dom
 		/// default attribute additions do not occur. It is expected that a 
 		/// future version of the DOM will provide a way for populating a 
 		/// <code>DocumentType</code>.
-		/// <br>HTML-only DOM implementations do not need to implement this method.
+		/// <br/>HTML-only DOM implementations do not need to implement this method.
 		/// </summary>
 		/// <param name="qualifiedNameThe">qualified name of the document type to be 
 		/// created.</param>

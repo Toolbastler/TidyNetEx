@@ -21,8 +21,8 @@ namespace TidyNet.Dom
 	/// also be accessed by an ordinal index, but this is simply to allow 
 	/// convenient enumeration of the contents of a <code>NamedNodeMap</code>, 
 	/// and does not imply that the DOM specifies an order to these Nodes. 
-	/// <p><code>NamedNodeMap</code> objects in the DOM are live.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/><code>NamedNodeMap</code> objects in the DOM are live.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface INamedNodeMap
 	{
@@ -45,7 +45,7 @@ namespace TidyNet.Dom
 		/// <summary> Adds a node using its <code>nodeName</code> attribute. If a node with 
 		/// that name is already present in this map, it is replaced by the new 
 		/// one.
-		/// <br>As the <code>nodeName</code> attribute is used to derive the name 
+		/// <br/>As the <code>nodeName</code> attribute is used to derive the name 
 		/// which the node must be stored under, multiple nodes of certain types 
 		/// (those that have a "special" string value) cannot be stored as the 
 		/// names would clash. This is seen as preferable to allowing nodes to be 
@@ -110,7 +110,7 @@ namespace TidyNet.Dom
 		/// <code>localName</code>. If a node with that namespace URI and that 
 		/// local name is already present in this map, it is replaced by the new 
 		/// one.
-		/// <br>HTML-only DOM implementations do not need to implement this method.
+		/// <br/>HTML-only DOM implementations do not need to implement this method.
 		/// </summary>
 		/// <param name="argA">node to store in this map. The node will later be 
 		/// accessible using the value of its <code>namespaceURI</code> and 
@@ -137,7 +137,7 @@ namespace TidyNet.Dom
 		/// attribute of the <code>Node</code> interface. If so, an attribute 
 		/// immediately appears containing the default value as well as the 
 		/// corresponding namespace URI, local name, and prefix when applicable.
-		/// <br>HTML-only DOM implementations do not need to implement this method.
+		/// <br/>HTML-only DOM implementations do not need to implement this method.
 		/// </summary>
 		/// <param name="namespaceURIThe">namespace URI of the node to remove.</param>
 		/// <param name="localNameThe">local name of the node to remove.</param>

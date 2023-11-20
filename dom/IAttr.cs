@@ -16,7 +16,7 @@ namespace TidyNet.Dom
 	/// <summary>The <code>Attr</code> interface represents an attribute in an 
 	/// <code>Element</code> object. Typically the allowable values for the 
 	/// attribute are defined in a document type definition.
-	/// <p><code>Attr</code> objects inherit the <code>Node</code> interface, but 
+	/// <br/><code>Attr</code> objects inherit the <code>Node</code> interface, but 
 	/// since they are not actually child nodes of the element they describe, the 
 	/// DOM does not consider them part of the document tree. Thus, the 
 	/// <code>Node</code> attributes <code>parentNode</code>, 
@@ -33,7 +33,7 @@ namespace TidyNet.Dom
 	/// DOM need to be aware that <code>Attr</code> nodes have some things in 
 	/// common with other objects inheriting the <code>Node</code> interface, but 
 	/// they also are quite distinct.
-	/// <p> The attribute's effective value is determined as follows: if this 
+	/// <br/> The attribute's effective value is determined as follows: if this 
 	/// attribute has been explicitly assigned any value, that value is the 
 	/// attribute's effective value; otherwise, if there is a declaration for 
 	/// this attribute, and that declaration includes a default value, then that 
@@ -42,14 +42,14 @@ namespace TidyNet.Dom
 	/// has been explicitly added. Note that the <code>nodeValue</code> attribute 
 	/// on the <code>Attr</code> instance can also be used to retrieve the string 
 	/// version of the attribute's value(s). 
-	/// <p>In XML, where the value of an attribute can contain entity references, 
+	/// <br/>In XML, where the value of an attribute can contain entity references, 
 	/// the child nodes of the <code>Attr</code> node may be either 
 	/// <code>Text</code> or <code>EntityReference</code> nodes (when these are 
 	/// in use; see the description of <code>EntityReference</code> for 
 	/// discussion). Because the DOM Core is not aware of attribute types, it 
 	/// treats all attribute values as simple strings, even if the DTD or schema 
 	/// declares them as having tokenized types. 
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface IAttr : INode
 	{
@@ -70,7 +70,7 @@ namespace TidyNet.Dom
 		/// implementation will then make a new attribute available with 
 		/// <code>specified</code> set to <code>false</code> and the default 
 		/// value (if one exists).
-		/// <br>In summary:  If the attribute has an assigned value in the document 
+		/// <br/>In summary:  If the attribute has an assigned value in the document 
 		/// then <code>specified</code> is <code>true</code>, and the value is 
 		/// the assigned value.  If the attribute has no assigned value in the 
 		/// document and has a default value in the DTD, then 
@@ -92,7 +92,7 @@ namespace TidyNet.Dom
 		/// Character and general entity references are replaced with their 
 		/// values. See also the method <code>getAttribute</code> on the 
 		/// <code>Element</code> interface.
-		/// <br>On setting, this creates a <code>Text</code> node with the unparsed 
+		/// <br/>On setting, this creates a <code>Text</code> node with the unparsed 
 		/// contents of the string. I.e. any characters that an XML processor 
 		/// would recognize as markup are instead treated as literal text. See 
 		/// also the method <code>setAttribute</code> on the <code>Element</code> 

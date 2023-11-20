@@ -35,12 +35,12 @@ namespace TidyNet
 		We duplicate this to recover from inline markup errors such as:
 		
 		<i>italic text
-		<p>more italic text</b> normal text
+		<br/>more italic text</b> normal text
 		
 		which for compatibility with Mosaic is mapped to:
 		
 		<i>italic text</i>
-		<p><i>more italic text</i> normal text
+		<br/><i>more italic text</i> normal text
 		
 		Note that any inline end tag pop's the effect of the current
 		inline start tag, so that </b> pop's <i> in the above example.

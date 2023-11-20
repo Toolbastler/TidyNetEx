@@ -20,11 +20,11 @@ namespace TidyNet.Dom
 	/// <code>CharacterData</code>, though <code>Text</code> and others do 
 	/// inherit the interface from it. All <code>offsets</code> in this interface 
 	/// start from <code>0</code>.
-	/// <p>As explained in the <code>DOMString</code> interface, text strings in 
+	/// <br/>As explained in the <code>DOMString</code> interface, text strings in 
 	/// the DOM are represented in UTF-16, i.e. as a sequence of 16-bit units. In 
 	/// the following, the term 16-bit units is used whenever necessary to 
 	/// indicate that indexing on CharacterData is done in 16-bit units.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface ICharacterData : INode
 	{
@@ -94,7 +94,7 @@ namespace TidyNet.Dom
 		/// INDEX_SIZE_ERR: Raised if the specified <code>offset</code> is 
 		/// negative or greater than the number of 16-bit units in 
 		/// <code>data</code>.
-		/// <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
+		/// <br/>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 		/// </exception>
 		void InsertData(int offset, string arg);
 

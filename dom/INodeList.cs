@@ -16,9 +16,9 @@ namespace TidyNet.Dom
 	/// <summary> The <code>NodeList</code> interface provides the abstraction of an ordered 
 	/// collection of nodes, without defining or constraining how this collection 
 	/// is implemented. <code>NodeList</code> objects in the DOM are live.
-	/// <p>The items in the <code>NodeList</code> are accessible via an integral 
+	/// <br/>The items in the <code>NodeList</code> are accessible via an integral 
 	/// index, starting from 0.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface INodeList
 	{

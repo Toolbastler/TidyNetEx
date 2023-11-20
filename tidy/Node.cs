@@ -500,7 +500,7 @@ namespace TidyNet
 			}
 			else if (element.Tag == tt.TagP && element.Content == null && lexer.Options.DropEmptyElements == true)
 			{
-				/* replace <p></p> by <br><br> to preserve formatting */
+				/* replace <br/></p> by <br/><br/> to preserve formatting */
 				Node node = lexer.InferredTag("br");
 				Node.CoerceNode(lexer, element, tt.TagBr);
 				Node.InsertNodeAfterElement(element, node);
@@ -557,9 +557,9 @@ namespace TidyNet
 		
 		/*
 		This maps 
-		<p>hello<em> world</em>
+		<br/>hello<em> world</em>
 		to
-		<p>hello <em>world</em>
+		<br/>hello <em>world</em>
 		
 		Trims initial space, by moving it before the
 		start tag, or if this element is the first in

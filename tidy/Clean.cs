@@ -1121,7 +1121,7 @@ namespace TidyNet
 		
 		example:
 		
-		<p>
+		<br/>
 		<b><font face="Arial" size="6">Draft Recommended Practice</font></b>
 		</p>
 		

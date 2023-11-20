@@ -19,10 +19,10 @@ namespace TidyNet.Dom
 	/// processing instruction targets (see section 2.6 of the XML 1.0 
 	/// specification ). The <code>nodeName</code> attribute inherited from 
 	/// <code>Node</code> is set to the declared name of the notation.
-	/// <p>The DOM Level 1 does not support editing <code>Notation</code> nodes; 
+	/// <br/>The DOM Level 1 does not support editing <code>Notation</code> nodes; 
 	/// they are therefore readonly.
-	/// <p>A <code>Notation</code> node does not have any parent.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+	/// <br/>A <code>Notation</code> node does not have any parent.
+	/// <br/>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
 	/// </summary>
 	internal interface INotation : INode
 	{
