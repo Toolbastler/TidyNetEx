@@ -676,7 +676,7 @@ namespace TidyNet
 			}
 			return null;
 		}
-
+		
 		/// <summary> DocType - user specified doctype
 		/// omit | auto | strict | loose | <i>fpi</i>
 		/// where the <i>fpi</i> is a string similar to
@@ -720,7 +720,7 @@ namespace TidyNet
 				}
 			}
 		}
-
+		
 		internal class Tokenizer
 		{
 			public Tokenizer(string source, string delimiters)
@@ -838,7 +838,7 @@ namespace TidyNet
 			}
 		}
 		
-		private void ParseInlineTagNames(string s, string option)
+		private void ParseInlineTagNames(string s)
 		{
 			Tokenizer t = new Tokenizer(s, " \t\n\r,");
 			while (t.HasMoreTokens())
@@ -847,7 +847,7 @@ namespace TidyNet
 			}
 		}
 		
-		private void ParseBlockTagNames(string s, string option)
+		private void ParseBlockTagNames(string s)
 		{
 			Tokenizer t = new Tokenizer(s, " \t\n\r,");
 			while (t.HasMoreTokens())
@@ -856,7 +856,7 @@ namespace TidyNet
 			}
 		}
 		
-		private void ParseEmptyTagNames(string s, string option)
+		private void ParseEmptyTagNames(string s)
 		{
 			Tokenizer t = new Tokenizer(s, " \t\n\r,");
 			while (t.HasMoreTokens())
@@ -865,7 +865,7 @@ namespace TidyNet
 			}
 		}
 		
-		private void ParsePreTagNames(string s, string option)
+		private void ParsePreTagNames(string s)
 		{
 			Tokenizer t = new Tokenizer(s, " \t\n\r,");
 			while (t.HasMoreTokens())
@@ -900,7 +900,7 @@ namespace TidyNet
 		private bool _dropEmptyParas = true; /* discard empty p elements */
 		private bool _dropEmptyElements = true; /* discard empty elements */
 		private bool _fixComments = true; /* fix comments with adjacent hyphens */
-		private bool _breakBeforeBR = false; /* o/p newline before <br> or not? */
+		private bool _breakBeforeBR = false; /* o/p newline before <br/> or not? */
 		private bool _burstSlides = false; /* create slides on each h2 element */
 		private bool _numEntities = false; /* use numeric entities */
 		private bool _preserveEntities = false; /* preserve well-formed entities */
@@ -917,11 +917,62 @@ namespace TidyNet
 		private bool _indentAttributes = false; /* newline+indent before each attribute */
 		private bool _xmlPIs = false; /* if set to yes PIs must end with ?> */
 		private bool _xmlSpace = false; /* if set to yes adds xml:space attr as needed */
-		private bool _encloseBodyText = false; /* if yes text at body is wrapped in <p>'s */
-		private bool _encloseBlockText = false; /* if yes text in blocks is wrapped in <p>'s */
+		private bool _encloseBodyText = false; /* if yes text at body is wrapped in <br/>'s */
+		private bool _encloseBlockText = false; /* if yes text in blocks is wrapped in <br/>'s */
 		private bool _word2000 = false; /* draconian cleaning for Word2000 */
 		private bool _tidyMark = true; /* add meta element indicating tidied doc */
 		private bool _literalAttribs = false; /* if true attributes may use newlines */
 		private TagTable _tt = new TagTable();
-	}
+     
+		
+		//
+        // extended
+		//
+        string _newBlocklevelTags;
+		
+        public string NewBlocklevelTags
+        {
+            get => _newBlocklevelTags;
+            set
+            {
+                _newBlocklevelTags = value;
+                ParseBlockTagNames(value);
+            }
+        }
+
+        string _newEmptyTags;
+
+        public string NewEmptyTags
+        {
+            get => _newEmptyTags;
+            set
+            {
+                _newEmptyTags = value;
+                ParseEmptyTagNames(value);
+            }
+        }
+
+        string _newInlineTags;
+        string _newPreTags;
+
+        public string NewInlineTags
+        {
+            get => _newInlineTags;
+            set
+            {
+                _newInlineTags = value;
+				ParseInlineTagNames(value);
+            }
+        }
+		
+        public string NewPreTags
+        {
+            get => _newPreTags;
+            set
+            {
+                _newPreTags = value; 
+				ParsePreTagNames(value);
+            }
+        }
+    }
 }
