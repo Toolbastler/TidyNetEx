@@ -759,6 +759,10 @@ namespace TidyNet
 			{
 				if (doctype != null)
 					Node.DiscardElement(doctype);
+
+				// xmlns auch bei DocType OMIT setzen
+                FixHtmlNameSpace(root, namespace_Renamed);
+
 				return true;
 			}
 			
