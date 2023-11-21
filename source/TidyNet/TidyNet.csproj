@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
-		<TargetFrameworks>net6.0;net4.8</TargetFrameworks>
+		<TargetFrameworks>net6.0;net4.8;netstandard2.1</TargetFrameworks>
 		<Description>HTML parser and pretty printer - for .NET (based on Dave Raggett and Seth Yates)</Description>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
