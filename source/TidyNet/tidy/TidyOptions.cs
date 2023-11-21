@@ -975,10 +975,5 @@ namespace TidyNet
 				ParsePreTagNames(value);
             }
         }
-
-        public bool DropBRElements { get; set; }
-
-        public bool ShowInfos { get; set; }
-        public bool ShowWarnings { get; set; }
     }
 }

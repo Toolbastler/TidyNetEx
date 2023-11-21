@@ -5,9 +5,9 @@ using TidyNet;
 namespace TidyNetConsole;
 
 [DebuggerStepThrough]
-internal static class TidyNetHelper
+internal class TidyNetHelper
 {
-    public static string Tidy(string html)
+    public string Tidy(string html)
     {
         var tidy = new Tidy();
 
@@ -26,13 +26,13 @@ internal static class TidyNetHelper
 
         if (messages.Any())
         {
-            if (tidy.Options.ShowInfos)
+            if (ShowInfos)
                 Console.WriteLine($"Errors: {messages.Errors} | Warnings: {messages.Warnings}");
 
             foreach (var message in messages)
             {
-                if (tidy.Options.ShowInfos && message.Level == MessageLevel.Info ||
-                    tidy.Options.ShowWarnings && message.Level == MessageLevel.Warning)
+                if (ShowInfos && message.Level == MessageLevel.Info ||
+                    ShowWarnings && message.Level == MessageLevel.Warning)
                 {
                     Console.WriteLine(message);
                 }
@@ -45,18 +45,19 @@ internal static class TidyNetHelper
 
         var result = Encoding.UTF8.GetString(output.ToArray());
 
-        if (tidy.Options.DropBRElements)
+        if (DropBRElements)
         {
             result = result.Replace("\r\n<br />", "").Replace("\n<br />", "").Replace("\r<br />", "");
             result = result.Replace("\r\n<br>", "").Replace("\n<br>", "").Replace("\r<br>", "");
         }
 
-        result = result.Replace("\r\n\r\n", "\r\n").Replace("\n\n", "\n").Replace("\r\r", "\r");
-        
+        if (DropMultipleLinefeeds)
+            result = result.Replace("\r\n\r\n", "\r\n").Replace("\n\n", "\n").Replace("\r\r", "\r");
+
         return result;
     }
-    
-    static void BuildOptions(Tidy tidy)
+
+    void BuildOptions(Tidy tidy)
     {
         /* optionen zum erzeugen einer sauberen und flachen absatzstruktur */
         //tidy.Options.EncloseBlockText = true;
@@ -90,14 +91,20 @@ internal static class TidyNetHelper
         tidy.Options.DocType = DocType.Omit;
         tidy.Options.MakeClean = true;
         tidy.Options.CharEncoding = CharEncoding.UTF8;
-        
+
         /* html5 - Elemente deklarieren */
         tidy.Options.NewBlocklevelTags = "aside article figure figcaption";
         tidy.Options.NewInlineTags = "mark";
 
-        tidy.Options.ShowInfos = false;
-        tidy.Options.ShowWarnings = false;
-
-        tidy.Options.DropBRElements = true;
+        ShowInfos = true;
+        ShowWarnings = true;
+        DropBRElements = true;
+        DropMultipleLinefeeds = true;
     }
+
+    public bool DropBRElements { get; set; }
+    public bool DropMultipleLinefeeds { get; set; }
+
+    public bool ShowInfos { get; set; }
+    public bool ShowWarnings { get; set; }
 }
