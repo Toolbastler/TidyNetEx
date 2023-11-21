@@ -1,8 +1,10 @@
-﻿using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 using TidyNet;
 
 namespace TidyNetConsole;
 
+[DebuggerStepThrough]
 internal static class TidyNetHelper
 {
     public static string Tidy(string html)
@@ -53,7 +55,7 @@ internal static class TidyNetHelper
         
         return result;
     }
-
+    
     static void BuildOptions(Tidy tidy)
     {
         /* optionen zum erzeugen einer sauberen und flachen absatzstruktur */
