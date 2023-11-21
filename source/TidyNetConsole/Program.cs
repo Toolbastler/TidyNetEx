@@ -1,14 +1,20 @@
 ﻿using TidyNetConsole;
 
-// including new tag <mark>
-TryExec("<html><head><body>Das ist ein <mark>Täst</mark> mit Umlauten!</body>");
+while (true)
+{
+    var html = File.ReadAllText(@"TestData\test.html");
 
-// fehlerhaft
-TryExec("<html><head><body>Das ist ein <mark>Täst</mark> <notexists>mit</notexists> Umlauten!</body>");
+    var result = TryExec(html);
+    
+//// including new tag <mark>
+//TryExec("<html><head><body>Das ist ein <mark>Täst</mark> mit Umlauten!</body>");
 
+//// fehlerhaft
+//TryExec("<html><head><body>Das ist ein <mark>Täst</mark> <notexists>mit</notexists> Umlauten!</body>");
 
-Console.WriteLine("[Enter] zum Beenden");
-Console.ReadLine();
+    Console.WriteLine("[Enter] zum Neustarten");
+    Console.ReadLine();
+}
 
 string? TryExec(string html)
 {

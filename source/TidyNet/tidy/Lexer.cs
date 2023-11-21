@@ -1,5 +1,3 @@
-using System;
-using System.IO;
 using System.Text;
 using System.Collections;
 
@@ -214,7 +212,7 @@ namespace TidyNet
 		public static byte[] GetBytes(string str)
 		{
 			try
-			{
+            {
 				return Encoding.UTF8.GetBytes(str);
 			}
 			catch (IOException e)
@@ -1397,6 +1395,7 @@ namespace TidyNet
 					if (mode == IgnoreWhitespace)
 						mode = MixedContent;
 						
+                    insertspace = false;
 					waswhite = false;
 					continue;
 					

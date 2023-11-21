@@ -11,4 +11,10 @@
     <ProjectReference Include="..\TidyNet\TidyNet.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TestData\test.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
