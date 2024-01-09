@@ -4,11 +4,17 @@
 		<OutputType>Library</OutputType>
 		<TargetFrameworks>net6.0;net4.8;netstandard2.1</TargetFrameworks>
 		<Description>HTML parser and pretty printer - for .NET (based on Dave Raggett and Seth Yates)</Description>
+    	<Authors>landaumedia</Authors>
+    	<Company>Landaumedia</Company>
+		<PackageId>LandauMedia.TidyNetEx</PackageId>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<LangVersion>10.0</LangVersion>
-		<Version>1.2.0</Version>
+		<Version>1.2.2</Version>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageProjectUrl>https://github.com/landaumedia/TidyNetEx</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/landaumedia/TidyNetEx</RepositoryUrl>
+    	<RepositoryType>github</RepositoryType>
 	</PropertyGroup>
 
 </Project>

@@ -7,3 +7,4 @@ obj/
 /.vs/ProjectEvaluation/*.bin
 /.vs/TidyNet/DesignTimeBuild/*.v2
 /.vs/TidyNet/v17/*.v2
+/source/TidyNet/Properties/PublishProfiles/*.user
